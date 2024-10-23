@@ -171,11 +171,23 @@ Retrieve number `66` from the `numArrays` array. As part of process
 Complete Exercise 14 in the space below:
 */
 
-const num = numArrays[numArrays.length-2]
+//const num = numArrays[2][1]; //direct, hardcoded, less flexible
 
-num.splice(0, 1)
+//const num = numArrays[numArrays.length-2] dynamic solution adaptable
 
-console.log('Exercise 14 result:', num);
+//num.splice(0, 1)
+
+//console.log('Exercise 14 result:', num);
+
+const num = numArrays[numArrays.length - 2];
+const modifiedNum = [];
+
+// Iterate, skip first element
+for (let i = 1; i < num.length; i++) {
+  modifiedNum.push(num[i]);
+}
+
+console.log('Exercise 14 result:', modifiedNum);
 
 /*
 Exercise 15: Nested array sum
